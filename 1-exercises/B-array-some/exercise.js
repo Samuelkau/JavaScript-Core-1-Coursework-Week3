@@ -12,6 +12,11 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 // https://nodejs.org/api/process.html#process_process_exit_code
 // process.exit(1);
 
+pairsCheck = pairs.some (function (indexes){ 
+  if (indexes === null) {
+    return process.exit(1);
+  }
+})
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
@@ -21,4 +26,6 @@ var pairs = pairsByIndex.map(function (indexes) {
   return [student, mentor];
 });
 
+
 console.log(pairs);
+
